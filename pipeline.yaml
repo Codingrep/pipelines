@@ -1,7 +1,7 @@
 trigger:
-  - develop
+  - main
 pr:
-  - develop
+  - none
 
 
 
