@@ -18,7 +18,4 @@ steps:
           data = json.load(jsonFile)
           version = data["version"]
           print (version)
-- bash: |
-    echo "##vso[task.setvariable variable=myVar;]$version"
-- bash: |
-    echo "You can use macro syntax for variables: $(myVar)" 
+          os.system("echo the version is $version")
