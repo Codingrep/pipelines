@@ -9,4 +9,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- bash: echo "The security-lib-ci pipeline runs first"
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      import json, os
+      with open("package.json", "r+") as jsonFile:
+          data = json.load(jsonFile)
+          version = data["version"]
+          print (version)
